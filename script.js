@@ -1,9 +1,11 @@
-/* Functions to travel to a specific decade */
-function travelToDecade(decade) {
-    // Hide all decades
-    document.querySelectorAll('.decade').forEach(element => {
-        element.classList.add('hidden');
+// Adding some interactivity to the "Add to Cart" buttons
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.item button');
+  
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Item added to cart!');
+      });
     });
-    // Show the selected decade
-    document.getElementById(decade).classList.remove('hidden');
-}
+  });
+  
