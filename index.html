@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Remember, Y2K might break this -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello!</title>
+
+  <head>
+    <title>Home</title>
+    <style>
+      html, body {
+        cursor: url('openphone.png'), auto;
+      }
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar {
+        width: 200px;
+        background-color: #f2f2f2;
+        height: 100vh;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        font-family: 'Comic Sans MS', cursive;
+      }
+
+      .navbar a:hover {
+        background-color: #ddd;
+      }
+
+      .content {
+        flex-grow: 1;
+        padding: 20px;
+        font-family: 'Comic Sans MS', cursive;
+        /* display: flex; */
+        /* justify-content: center; */
+      }
+
+      /* .content {
+            flex-grow: 1;
+            padding: 20px;
+            font-family: 'Comic Sans MS', cursive;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-left: 220px; /* Adjust for navbar width */
+      /* } */
+      */ h1,
+      p {
+        font-family: 'Comic Sans MS', cursive;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* .textbox-container {
+                display: flex;
+                align-items: center;
+                background: #ffffff;
+                border-radius: 8px;
+                padding: 0 10px;
+                width: 500px;
+                height: 50px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            } */
+      .textbox-container {
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 0 10px;
+        width: 300px;
+        height: 50px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+
+      .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+      .textbox {
+        flex-grow: 1;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        color: #333333;
+        background: none;
+        font-family: 'Comic Sans MS', cursive;
+      }
+
+      .textbox::placeholder {
+        color: #aaaaaa;
+      }
+
+      .mic-icon {
+        width: 24px;
+        height: 24px;
+        /* cursor: pointer; */
+      }
+
+      text {
+        font-family: 'Comic Sans MS', cursive;
+      }
+
+      input,
+      #help-input,
+      label {
+        font-family: 'Comic Sans MS', cursive;
+      }
+
+      #everything-but-navbar {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .form-group {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* Vertically center align items */
+        gap: 10px;
+        /* Optional: Add space between label and input */
+      }
+
+      label {
+        white-space: nowrap;
+        font-size: 2em;
+        /* Prevent label text from wrapping */
+      }
+
+      button {
+        border: 2px solid black;
+        color: black;
+        padding: 6px 6px;
+        font-size: 14px;
+        cursor: url('closedphone.png'), auto;
+        font-family: 'Comic Sans MS', cursive;
+      }
+    </style>
+  </head>
+
+<body>
+  <div class="navbar">
+    <img src="padpencil.gif" alt="New chat" style="width:30px;height:30px;">
+    <!-- <a href="#"><strong>NEW CHAT</strong></a> -->
+    <br>
+    <div class="navbar-box"><button href="#">2000s GPT</button></div>
+    <div class="navbar-box"><button href="#">1990s GPT</button></div>
+    <br>
+    <a href="#"><strong>Today</strong></a>
+    <div class="navbar-box"><button href="#">Chat 1</button></div>
+    <div class="navbar-box"><button href="#">Chat 2</button></div>
+    <div class="navbar-box"><button href="#">Chat 3</button></div>
+    <div class="navbar-box"><button href="#">Chat 4</button></div>
+    <br>
+    <a href="#"><strong>Yesterday</strong></a>
+    <div class="navbar-box"><button href="#">Chat 5</button></div>
+    <div class="navbar-box"><button href="#">Chat 6</button></div>
+    <div class="navbar-box"><button href="#">Chat 7</button></div>
+    <div class="navbar-box"><button href="#">Chat 8</button></div>
+  </div>
+  <div id="everything-but-navbar">
+    <div class="form-group">
+      <label for="help-input">What do you need help with?</label>
+      <div class="textbox-container">
+        <input class="textbox" type="text" placeholder="Message ChatGPT">
+        <input type="submit" value="Submit">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+<!---
+- ChatGPT but 90s!!!
+- personal website with Tiny Tower, rainbows, so much fun like example
+- use old sharpener icon, iphone somehow
+- retro logo
+- lens into the future!!! -- future predictor for each year, 2011 to now
+- internet time capsule
+- build your own website
+- fun effects when you submit
+-->
