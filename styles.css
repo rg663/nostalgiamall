@@ -1,0 +1,82 @@
+/* General Styles */
+html {
+    font-family: 'Comic Sans MS', cursive;
+}
+
+body {
+    background-color: #0800ff;
+    color: rgb(255, 242, 0);
+    /* font-family: 'Courier Sans', Courier, monospace; */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: marquee 10s linear infinite;
+}
+
+p {
+    font-size: 1.5em;
+    margin-top: 0;
+    animation: blinking 1s step-start infinite;
+}
+
+/* Intro Section */
+#intro {
+    padding: 50px;
+    background-color: #8000ff;
+    border: 2px solid #0ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0ff;
+}
+
+/* Buttons */
+.buttons button {
+    background-color: #ef0000;
+    /* border: 2px black; */
+    border: 8px solid black;
+    color: #0ff;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.buttons button:hover {
+    background-color: #ff00ff;
+}
+
+/* Decade Sections */
+.decade {
+    padding: 20px;
+    background-color: #ff0000;
+    border: 2px solid #0ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0ff;
+    margin: 20px;
+    display: none;
+}
+
+/* Retro Effects */
+.blinking {
+    animation: blink 1s step-start infinite;
+}
+
+/* @keyframes marquee {
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(-100%);}
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+} */
