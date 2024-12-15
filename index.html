@@ -39,9 +39,19 @@
     </nav>
   </header>
 
-  <marquee class="marquee"><strong>Special Offer: Free Tamagotchi with over five things in cart!</strong>
+  <!-- <iframe style="border-radius:12px"
+    src="https://open.spotify.com/embed/playlist/3C64V048fGyQfCjmu9TIGA?utm_source=generator&theme=0" width="100%"
+    height="152" frameBorder="0" allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
+
+  <marquee class="marquee"><strong>Special Offer: Free Tamagotchi with 5 things in cart! * Keep your sound on for fun
+      sound effects and background music! * Unlock the Retro 90s Kid badge by adding 10 items to your cart!</strong>
     <!-- <img src="images/sillybandzad.jpg" alt="sillybandzad"> -->
   </marquee>
+
+  <audio id="audio1" src="audio/1.mp3"></audio>
+  <audio id="audio2" src="audio/2.mp3"></audio>
+  <audio id="audio3" src="audio/3.mp3"></audio>
 
   <main class="container">
     <div id="retro-modal" hidden>
@@ -66,138 +76,140 @@
     <section class="item-listing">
       <h1>Items to Buy</h1>
       <div class="main">
-        <div class="item">
-          <img src="images/burntcd.jpg" alt="Burnt CD">
-          <h2>A Burnt CD</h2>
-          <p>The Spotify of the 2000s!</p>
-          <button onclick="addToCart('A Burnt CD')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/scholasticbookorder.jpg" alt="Scholastic Book Fair">
-          <h2>A Trip to the Scholastic Book Fair</h2>
-          <p>Who needs Kindles when you have the book fair?</p>
-          <button onclick="addToCart('A Trip to the Scholastic Book Fair')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/playdoh.jpg" alt="Playdoh!">
-          <h2>Cans of Playdoh</h2>
-          <p>Mmm, the smell of this image.</p>
-          <button onclick="addToCart('Cans of Playdoh')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/cartridgepencil.jpg" alt="Pencil with cartridges">
-          <h2>A Pencil With Cartridges</h2>
-          <p>The pain of losing a cartridge.</p>
-          <button onclick="addToCart('A Pencil With Cartridges')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/ikeamat.jpg" alt="City Maps Mat">
-          <h2>The Mat We All Had</h2>
-          <p>The joy of sitting on these is one kids of these days will never know.</p>
-          <button onclick="addToCart('The Mat We All Had')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/fortuneteller.jpg" alt="Fortune Teller">
-          <h2>Fortune Teller (or Cootie Catcher)</h2>
-          <p>1, 2, 3, 4. Pick one.</p>
-          <button onclick="addToCart('Fortune Teller')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/ipod.jpg" alt="iPod">
-          <h2>The iPod Nano</h2>
-          <p>Again, who needs Spotify?</p>
-          <button onclick="addToCart('The iPod Nano')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/motorola.jpg" alt="Motorola">
-          <h2>A Motorola Flip Phone</h2>
-          <p>Typing speed ... 10 WPM.</p>
-          <button onclick="addToCart('A Motorola Flip Phone')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/gimp.jpg" alt="Gimp">
-          <h2>Gimps/Scoobidoos</h2>
-          <p>Was it just me, or did everyone have their friends start one of these off?</p>
-          <button onclick="addToCart('Gimps')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/fisherprice.jpg" alt="Fisher Price">
-          <h2>The Cutest Phones</h2>
-          <p>Nothing beated the joy of spinning the dial on these phones.</p>
-          <button onclick="addToCart('The Cutest Phones')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/nintendods.webp" alt="DS">
-          <h2>Nintendo DS</h2>
-          <p>What was your first game? Mine was Mario.</p>
-          <button onclick="addToCart('Nintendo DS')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/clubpenguin.webp" alt="Club Penguin Cards">
-          <h2>Club Penguin Membership!</h2>
-          <p>I spent hours on Club Penguin.</p>
-          <button onclick="addToCart('Club Penguin Membership')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/highlights.jpg" alt="Highlights">
-          <h2>A Copy of the Highlights Magazine</h2>
-          <p>My daily puzzles have been replaced by my phone :(</p>
-          <button onclick="addToCart('A Copy of the Highlights Magazine')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/spacemaker.jpg" alt="Spacemaker">
-          <h2>Spacemaker Pencil Box</h2>
-          <p></p>
-          <button onclick="addToCart('Spacemaker Pencil Box')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/sillybandz.jpg" alt="Silly Bandz">
-          <h2>Silly Bandz</h2>
-          <p>The fashion icon and status symbol of the 2000s.</p>
-          <button onclick="addToCart('Silly Bandz')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/twinkletoes.jpeg" alt="Twinkle Toes">
-          <h2>The OG Twinkle Toes</h2>
-          <p>Sooo bling.</p>
-          <button onclick="addToCart('The OG Twinkle Toes')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/chucke.jpg" alt="Chuck E Cheese">
-          <h2>A Bucket of Coins at Chuck E Cheese</h2>
-          <p></p>
-          <button onclick="addToCart('A Bucket of Coins at Chuck E Cheese')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/razor.jpg" alt="Razor">
-          <h2>Razor Scooter</h2>
-          <p>The original segue.</p>
-          <button onclick="addToCart('Razor Scooter')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/disco.webp" alt="Disco">
-          <h2>The Cutest Disco Ball</h2>
-          <p></p>
-          <button onclick="addToCart('The Cutest Disco Ball')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/pencilgrip.webp" alt="Pencil Grips">
-          <h2>Some Pencil Grips in Your Pencil Box</h2>
-          <p></p>
-          <button onclick="addToCart('Some Pencil Grips in Your Pencil Box')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/blockbuster.jpg" alt="Blockbuster">
-          <h2>A Trip to a Blockbuster Store</h2>
-          <p></p>
-          <button onclick="addToCart('A Trip to a Blockbuster Store')">Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/s.webp" alt="Cool S">
-          <h2>Tutorial on How to Draw the Cool S</h2>
-          <p></p>
-          <button onclick="addToCart('A Trip to a Blockbuster Store')">Add to Cart</button>
-        </div>
+        <table class="product-grid">
+          <div class="item">
+            <img src="images/burntcd.jpg" alt="Burnt CD">
+            <h2>A Burnt CD</h2>
+            <p>The Spotify of the 2000s!</p>
+            <button onclick="addToCart('A Burnt CD')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/scholasticbookorder.jpg" alt="Scholastic Book Fair">
+            <h2>A Trip to the Scholastic Book Fair</h2>
+            <p>Who needs Kindles when you have the book fair?</p>
+            <button onclick="addToCart('A Trip to the Scholastic Book Fair')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/playdoh.jpg" alt="Playdoh!">
+            <h2>Cans of Playdoh</h2>
+            <p>Mmm, the smell of this image.</p>
+            <button onclick="addToCart('Cans of Playdoh')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/cartridgepencil.jpg" alt="Pencil with cartridges">
+            <h2>A Pencil With Cartridges</h2>
+            <p>The pain of losing a cartridge.</p>
+            <button onclick="addToCart('A Pencil With Cartridges')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/ikeamat.jpg" alt="City Maps Mat">
+            <h2>The Mat We All Had</h2>
+            <p>The joy of sitting on these is one kids of these days will never know.</p>
+            <button onclick="addToCart('The Mat We All Had')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/fortuneteller.jpg" alt="Fortune Teller">
+            <h2>Fortune Teller (or Cootie Catcher)</h2>
+            <p>1, 2, 3, 4. Pick one.</p>
+            <button onclick="addToCart('Fortune Teller')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/ipod.jpg" alt="iPod">
+            <h2>The iPod Nano</h2>
+            <p>Again, who needs Spotify?</p>
+            <button onclick="addToCart('The iPod Nano')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/motorola.jpg" alt="Motorola">
+            <h2>A Motorola Flip Phone</h2>
+            <p>Typing speed ... 10 WPM.</p>
+            <button onclick="addToCart('A Motorola Flip Phone')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/gimp.jpg" alt="Gimp">
+            <h2>Gimps/Scoobidoos</h2>
+            <p>Was it just me, or did everyone have their friends start one of these off?</p>
+            <button onclick="addToCart('Gimps')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/fisherprice.jpg" alt="Fisher Price">
+            <h2>The Cutest Phones</h2>
+            <p>Nothing beated the joy of spinning the dial on these phones.</p>
+            <button onclick="addToCart('The Cutest Phones')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/nintendods.webp" alt="DS">
+            <h2>Nintendo DS</h2>
+            <p>What was your first game? Mine was Mario.</p>
+            <button onclick="addToCart('Nintendo DS')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/clubpenguin.webp" alt="Club Penguin Cards">
+            <h2>Club Penguin Membership!</h2>
+            <p>I spent hours on Club Penguin.</p>
+            <button onclick="addToCart('Club Penguin Membership')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/highlights.jpg" alt="Highlights">
+            <h2>A Copy of the Highlights Magazine</h2>
+            <p>My daily puzzles have been replaced by my phone :(</p>
+            <button onclick="addToCart('A Copy of the Highlights Magazine')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/spacemaker.jpg" alt="Spacemaker">
+            <h2>Spacemaker Pencil Box</h2>
+            <p></p>
+            <button onclick="addToCart('Spacemaker Pencil Box')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/sillybandz.jpg" alt="Silly Bandz">
+            <h2>Silly Bandz</h2>
+            <p>The fashion icon and status symbol of the 2000s.</p>
+            <button onclick="addToCart('Silly Bandz')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/twinkletoes.jpeg" alt="Twinkle Toes">
+            <h2>The OG Twinkle Toes</h2>
+            <p>Sooo bling.</p>
+            <button onclick="addToCart('The OG Twinkle Toes')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/chucke.jpg" alt="Chuck E Cheese">
+            <h2>A Bucket of Coins at Chuck E Cheese</h2>
+            <p></p>
+            <button onclick="addToCart('A Bucket of Coins at Chuck E Cheese')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/razor.jpg" alt="Razor">
+            <h2>Razor Scooter</h2>
+            <p>The original segue.</p>
+            <button onclick="addToCart('Razor Scooter')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/disco.webp" alt="Disco">
+            <h2>The Cutest Disco Ball</h2>
+            <p></p>
+            <button onclick="addToCart('The Cutest Disco Ball')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/pencilgrip.webp" alt="Pencil Grips">
+            <h2>Some Pencil Grips in Your Pencil Box</h2>
+            <p></p>
+            <button onclick="addToCart('Some Pencil Grips in Your Pencil Box')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/blockbuster.jpg" alt="Blockbuster">
+            <h2>A Trip to a Blockbuster Store</h2>
+            <p></p>
+            <button onclick="addToCart('A Trip to a Blockbuster Store')">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/s.webp" alt="Cool S">
+            <h2>Tutorial on How to Draw the Cool S</h2>
+            <p></p>
+            <button onclick="addToCart('A Trip to a Blockbuster Store')">Add to Cart</button>
+          </div>
+        </table>
       </div>
     </section>
 
@@ -305,7 +317,7 @@
     background: yellow;
     border: 2px solid black;
     padding: 5px;
-    font-family: 'Comic Sans MS', sans-serif;
+    font-family: 'Courier New', monospace;
   }
 
   .blink {
@@ -326,7 +338,7 @@
     text-align: center;
     padding: 20px;
     font-family: 'Impact', sans-serif;
-    text-shadow: 5px 2px #ff33cc;
+    text-shadow: 5px 2px #ff6a00;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
 
@@ -395,7 +407,7 @@
     margin: 5px 0;
     color: #FF00FF;
     /* Bright pink color */
-    text-shadow: 2px 2px #00ff3c;
+    text-shadow: 1px 1px #00ff3c;
     /* Add a shadow for depth */
   }
 
@@ -612,15 +624,39 @@
     transform: scale(1.1);
     filter: pixelate(5px);
   }
+
+  audio {
+    display: none;
+  }
 </style>
 <script>
-  var sound = new Audio("images/cha-ching-7053.mp3");
+  var sound = new Audio("audio/cha-ching-7053.mp3");
+  var audio1 = new Audio("audio/1.mp3");
+  var audio2 = new Audio("audio/2.mp3");
+  var audio3 = new Audio("audio/3.mp3");
   let visitorCount = 456;
   // let cart = 0;
   document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM fully loaded and parsed');
     const buttons = document.querySelectorAll('.item button');
     console.log('Buttons found:', buttons);
+    // const audio1 = document.getElementById('audio1');
+    // const audio2 = document.getElementById('audio2');
+    // const audio3 = document.getElementById('audio3');
+    audio1.autoplay = true;
+    audio1.play();
+    audio1.addEventListener('ended', function () {
+      audio2.play();
+      audio1.currentTime = 0;
+    });
+    audio2.addEventListener('ended', function () {
+      audio3.play();
+      audio2.currentTime = 0;
+    });
+    audio3.addEventListener('ended', function () {
+      audio1.play();
+      audio3.currentTime = 0;
+    });
     // buttons.forEach(button => {
     //   button.addEventListener('click', () => {
     //     cart += 1;
@@ -663,6 +699,9 @@
       const Tamagotchi = document.createElement('li');
       Tamagotchi.textContent = 'Free Tamagotchi';
       cartItems.appendChild(Tamagotchi)
+    }
+    if (cart.length == 10) {
+      showModal('Congratulations! You have unlocked the Rad Retro 90s Kid badge! 🏆');
     }
     sound.currentTime = 0;
   }
