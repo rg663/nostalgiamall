@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nostalgia Mall</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="/images/fav.png">
+  <link rel="icon" type="image/x-icon" href="images/fav.png">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <body class="retro">
-  <audio id="background-noise" loop>
+  <!-- <audio id="background-noise" loop> -->
     <!-- <source src="sounds/dialup.mp3" type="audio/mpeg"> -->
-    Your browser does not support the audio element.
-  </audio>
+    <!-- Your browser does not support the audio element. -->
+  <!-- </audio> -->
   <!-- <button onclick="toggleAudio()">Mute/Unmute Background Sound</button> -->
 
   <!-- <header>
@@ -49,9 +49,9 @@
     <!-- <img src="images/sillybandzad.jpg" alt="sillybandzad"> -->
   </marquee>
 
-  <audio id="audio1" src="audio/1.mp3"></audio>
+  <!-- <audio id="audio1" src="audio/1.mp3"></audio>
   <audio id="audio2" src="audio/2.mp3"></audio>
-  <audio id="audio3" src="audio/3.mp3"></audio>
+  <audio id="audio3" src="audio/3.mp3"></audio> -->
 
   <main class="container">
     <div id="retro-modal" hidden>
@@ -634,6 +634,7 @@
   var audio1 = new Audio("audio/1.mp3");
   var audio2 = new Audio("audio/2.mp3");
   var audio3 = new Audio("audio/3.mp3");
+  audio1.autoplay = true;
   let visitorCount = 456;
   // let cart = 0;
   document.addEventListener('DOMContentLoaded', function () {
@@ -643,8 +644,7 @@
     // const audio1 = document.getElementById('audio1');
     // const audio2 = document.getElementById('audio2');
     // const audio3 = document.getElementById('audio3');
-    audio1.autoplay = true;
-    audio1.play();
+    // audio1.play();
     audio1.addEventListener('ended', function () {
       audio2.play();
       audio1.currentTime = 0;
@@ -718,11 +718,11 @@
 
   document.querySelector('footer p:first-child').textContent = `You’re visitor #${('000000' + visitorCount).slice(-7)} to this mall!`;
 
-  function loadAnimation() {
-    showModal('Loading... Please wait like it’s 1999!');
-  }
+  // function loadAnimation() {
+  //   showModal('Loading... Please wait like it’s 1999!');
+  // }
 
-  window.onload = loadAnimation;
+  // window.onload = loadAnimation;
 
   document.body.addEventListener('keydown', (e) => {
     // if (e.key === 'ArrowUp' && e.ctrlKey) {
