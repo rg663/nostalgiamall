@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nostalgia Mall</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+
 <body class="retro">
   <audio id="background-noise" loop>
     <!-- <source src="sounds/dialup.mp3" type="audio/mpeg"> -->
     Your browser does not support the audio element.
   </audio>
-  <button onclick="toggleAudio()">Mute/Unmute Background Sound</button>
+  <!-- <button onclick="toggleAudio()">Mute/Unmute Background Sound</button> -->
 
   <!-- <header>
     <h1>Welcome to Nostalgia Mall</h1>
@@ -31,185 +34,598 @@
         <frame src="menu.html">
         <frame src="main.html">
       </frameset> -->
+      <!-- <a>View Cart (0)</a> -->
     </nav>
   </header>
 
-  <marquee class="marquee">Special Offer: Free Tamagotchi with orders over $50!</marquee>
+  <marquee class="marquee">Special Offer: Free Tamagotchi with over five things in cart!
+    <!-- <img src="images/sillybandzad.jpg" alt="sillybandzad"> -->
+  </marquee>
 
-  <main>
+  <main class="container">
+    <section class="wall-of-fame">
+      <img src="images/camera.png" width=150px height=150px alt="Retro Cart">
+      <h2>Shopper’s Wall of Fame</h2>
+      <hr>
+      <form id="upload-form">
+        <label for="profile-picture">Upload Your Retro Profile Picture:</label>
+        <input type="file" id="profile-picture" accept="image/*">
+        <button type="submit">Upload</button>
+      </form>
+      <div id="fame-display"></div>
+    </section>
+
     <section class="item-listing">
+      <h1>Items to Buy</h1>
       <div class="main">
         <div class="item">
           <img src="images/burntcd.jpg" alt="Burnt CD">
           <h2>A Burnt CD</h2>
           <p>The Spotify of the 2000s!</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('A Burnt CD')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/scholasticbookorder.jpg" alt="Scholastic Book Fair">
           <h2>A Trip to the Scholastic Book Fair</h2>
           <p>Who needs Kindles when you have the book fair?</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('A Trip to the Scholastic Book Fair')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/playdoh.jpg" alt="Playdoh!">
           <h2>Cans of Playdoh</h2>
           <p>Mmm, the smell of this image.</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('Cans of Playdoh')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/cartridgepencil.jpg" alt="Pencil with cartridges">
           <h2>A Pencil With Cartridges</h2>
           <p>The pain of losing a cartridge.</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('A Pencil With Cartridges')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/ikeamat.jpg" alt="City Maps Mat">
           <h2>The Mat We All Had</h2>
           <p>The joy of sitting on these is one kids of these days will never know.</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('The Mat We All Had')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/fortuneteller.jpg" alt="Fortune Teller">
           <h2>Fortune Teller (or Cootie Catcher)</h2>
           <p>1, 2, 3, 4. Pick one.</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('Fortune Teller')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/ipod.jpg" alt="iPod">
           <h2>The iPod Nano</h2>
           <p>Again, who needs Spotify?</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('The iPod Nano')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/motorola.jpg" alt="Motorola">
           <h2>A Motorola Flip Phone</h2>
           <p>Typing speed ... 10 WPM.</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('A Motorola Flip Phone')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/gimp.jpg" alt="Gimp">
           <h2>Gimps/Scoobidoos</h2>
           <p>Was it just me, or did everyone have their friends start one of these off?</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('Gimps')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/fisherprice.jpg" alt="Fisher Price">
           <h2>The Cutest Phones</h2>
           <p>Nothing beated the joy of spinning the dial on these phones.</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('The Cutest Phones')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/nintendods.webp" alt="DS">
           <h2>Nintendo DS</h2>
           <p>What was your first game? Mine was Mario.</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('Nintendo DS')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/clubpenguin.webp" alt="Club Penguin Cards">
           <h2>Club Penguin Membership!</h2>
           <p>I spent hours on Club Penguin.</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('Club Penguin Membership')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/highlights.jpg" alt="Highlights">
           <h2>A Copy of the Highlights Magazine</h2>
           <p>My daily puzzles have been replaced by my phone :(</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('A Copy of the Highlights Magazine')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/spacemaker.jpg" alt="Spacemaker">
           <h2>Spacemaker Pencil Box</h2>
           <p></p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('Spacemaker Pencil Box')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/sillybandz.jpg" alt="Silly Bandz">
           <h2>Silly Bandz</h2>
           <p>The fashion icon and status symbol of the 2000s.</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('Silly Bandz')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/twinkletoes.jpeg" alt="Twinkle Toes">
           <h2>The OG Twinkle Toes</h2>
           <p>Sooo bling.</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('The OG Twinkle Toes')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/chucke.jpg" alt="Chuck E Cheese">
           <h2>A Bucket of Coins at Chuck E Cheese</h2>
           <p></p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('A Bucket of Coins at Chuck E Cheese')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/razor.jpg" alt="Razor">
           <h2>Razor Scooter</h2>
           <p>The original segue.</p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('Razor Scooter')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/disco.webp" alt="Disco">
           <h2>The Cutest Disco Ball</h2>
           <p></p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('The Cutest Disco Ball')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/pencilgrip.webp" alt="Pencil Grips">
           <h2>Some Pencil Grips in Your Pencil Box</h2>
           <p></p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('Some Pencil Grips in Your Pencil Box')">Add to Cart</button>
         </div>
         <div class="item">
           <img src="images/blockbuster.jpg" alt="Blockbuster">
           <h2>A Trip to a Blockbuster Store</h2>
           <p></p>
-          <button>Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/chucke.jpg" alt="Chuck E Cheese">
-          <h2>A Bucket of Coins at Chuck E Cheese</h2>
-          <p></p>
-          <button>Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/razor.jpg" alt="Razor">
-          <h2>Razor Scooter</h2>
-          <p>The original segue.</p>
-          <button>Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/disco.webp" alt="Disco">
-          <h2>The Cutest Disco Ball</h2>
-          <p></p>
-          <button>Add to Cart</button>
-        </div>
-        <div class="item">
-          <img src="images/pencilgrip.webp" alt="Pencil Grips">
-          <h2>Some Pencil Grips in Your Pencil Box</h2>
-          <p></p>
-          <button>Add to Cart</button>
+          <button onclick="addToCart('A Trip to a Blockbuster Store')">Add to Cart</button>
         </div>
       </div>
     </section>
+
+    <aside class="cart">
+      <img src="images/trolley.png" width=150px height=150px alt="Retro Cart">
+      <h2 id="cart-title">Your Cart (0)</h2>
+      <hr>
+      <ul id="cart-items">
+        <!-- Cart items will be displayed here -->
+      </ul>
+    </aside>
+
   </main>
 
   <footer>
-    <p>You’re visitor #0000456 to this mall!</p>
+    <p class="blink">You’re visitor #0000456 to this mall!</p>
     <p>© 2000 Nostalgia Mall. All Rights Reserved.</p>
   </footer>
 </body>
+<style>
+  @import url('https://fonts.cdnfonts.com/css/jokerman');
+  @import url('https://fonts.cdnfonts.com/css/public-pixel');
+
+  body.retro {
+    background: linear-gradient(45deg, #ff00d4, #66ffed);
+    color: #000;
+    font-family: 'Comic Sans MS', cursive;
+    margin: 0;
+    padding: 0;
+    /* cursor: url('cursor.png'), auto; Add a custom retro cursor image */
+  }
+
+  .marquee {
+    font-size: 18px;
+    color: red;
+    background: yellow;
+    border: 2px solid black;
+    padding: 5px;
+    font-family: 'Comic Sans MS', sans-serif;
+  }
+
+  .blink {
+    animation: blinker 1s step-start infinite;
+    /* color: red; */
+    font-family: 'Impact', sans-serif;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  header {
+    background-color: #ff6699;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Impact', sans-serif;
+    text-shadow: 5px 2px #ff33cc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'Public Pixel', cursive;
+  }
+
+  header nav {
+    margin-top: 10px;
+  }
+
+  header a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid #ff6699;
+    /* border-radius: 5px; */
+    background-color: #ff3399;
+  }
+
+  header a:hover {
+    background-color: #ff0066;
+  }
+
+  .container {
+    background-color: #FFFF00;
+    /* Bright yellow background */
+
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: url('images/retro-bg.gif');
+    /* Add a retro background image */
+    /* border: 3px solid #0000FF; Add a solid border */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    /* Add a shadow for depth */
+    font-family: 'Comic Sans MS', cursive;
+    /* Use a nostalgic font */
+  }
+
+  .item {
+    background-color: #FFFF00;
+    /* Bright yellow background */
+    border: 3px solid #FF00FF;
+    /* Bright pink border */
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s, border-color 0.3s;
+    box-shadow: 5px 5px #000;
+    /* Add a shadow for depth */
+    font-family: 'Comic Sans MS', cursive;
+    /* Use a nostalgic font */
+  }
+
+  .item:hover {
+    transform: rotate(-5deg);
+    border-color: #00FF00;
+    /* Change border color on hover */
+  }
+
+  .item h2 {
+    font-size: 1.5em;
+    /* Increase font size */
+    margin: 5px 0;
+    color: #FF00FF;
+    /* Bright pink color */
+    text-shadow: 2px 2px #00ff3c;
+    /* Add a shadow for depth */
+  }
+
+  .item p {
+    color: #0000FF;
+    /* Bright blue color */
+    font-size: 1em;
+    /* Increase font size */
+  }
+
+  .item button {
+    background: #00FF00;
+    /* Bright green background */
+    border: 2px solid #0000FF;
+    /* Bright blue border */
+    color: #000;
+    /* Black text color */
+    font-size: 1em;
+    /* Increase font size */
+    padding: 5px;
+    text-shadow: 1px 1px #FFF;
+    /* Add a shadow for depth */
+    font-family: 'Comic Sans MS', cursive;
+    /* Use a nostalgic font */
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .item button:hover {
+    background: #00ffe1;
+    /* Change background color on hover */
+    transform: scale(1.1);
+  }
+
+  .cart {
+    width: 30%;
+    background-color: #FFFF00;
+    /* Bright yellow background */
+    padding: 20px;
+    /* border: 3px solid #FF00FF; Bright pink border */
+    box-shadow: 5px 5px #000;
+    /* Add a shadow for depth */
+    font-family: 'Comic Sans MS', cursive;
+    /* Use a nostalgic font */
+  }
+
+  .cart h2 {
+    text-align: center;
+    font-size: 1.5em;
+    /* Increase font size */
+    /* color: #FF00FF; Bright pink color */
+    /* text-shadow: 2px 2px #000; Add a shadow for depth */
+  }
+
+  .cart ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .cart ul li {
+    background-color: #00ffbf;
+    /* Bright pink background */
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #0000FF;
+    /* Bright blue border */
+    box-shadow: 3px 3px #000;
+    /* Add a shadow for depth */
+    font-family: 'Comic Sans MS', cursive;
+    /* Use a nostalgic font */
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li button {
+    background: linear-gradient(to bottom, #ffcc00, #ff9900);
+    border: 2px solid #ff6600;
+    color: #fff;
+    font-family: 'Impact', cursive;
+    font-weight: bold;
+    padding: 10px 15px;
+    /* cursor: url('cd.gif'), auto; */
+    /* border-radius: 5px; */
+    /* text-shadow: 1px 1px #000; */
+    transition: transform 0.2s, background-color 0.3s;
+  }
+
+  nav ul li button:hover {
+    background: #ff6600;
+    transform: scale(1.1);
+  }
+
+  nav a {
+    text-decoration: underline;
+    font-family: Serif, cursive;
+    color: black;
+    text-shadow: none;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* Adjusted min-width */
+    gap: 10px;
+    /* Reduced gap */
+    padding: 10px;
+    /* Reduced padding */
+  }
+
+  .item {
+    background-color: #fff;
+    border: 2px dotted #66ccff;
+    /* Reduced border width */
+    text-align: center;
+    padding: 10px;
+    /* Reduced padding */
+    transition: transform 0.2s, border-color 0.3s;
+    box-shadow: 3px 3px #333;
+    /* Reduced box-shadow */
+  }
+
+  .item:hover {
+    transform: rotate(-5deg);
+    border-color: #ffcc00;
+  }
+
+  .item img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .item h2 {
+    font-size: 1.2em;
+    /* Reduced font size */
+    margin: 5px 0;
+    /* Reduced margin */
+    color: #ff33cc;
+    /* text-shadow: 1px 1px #000; */
+  }
+
+  .item p {
+    color: #333;
+    font-size: 0.9em;
+    /* Reduced font size */
+  }
+
+  #file-upload-button {
+    background: none;
+  }
+
+  .item button {
+    background: none;
+    border: none;
+    color: #0000EE;
+    font-size: 0.9em;
+    /* Reduced font size */
+    padding: 5px;
+    /* Reduced padding */
+    /* text-shadow: 1px 1px #000; */
+    text-decoration: underline;
+    font-family: 'Jokerman', cursive;
+    /* border-radius: 5px; */
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .item button:hover {
+    /* background: #33cc33; */
+    transform: scale(1.05);
+  }
+
+  .item-listing {
+    background-color: #00ff3c;
+    /* Bright yellow background */
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 2px solid black;
+  }
+
+  footer {
+    text-align: center;
+    background: #ff99cc;
+    color: #fff;
+    padding: 10px;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .wall-of-fame {
+    /* margin-top: 40px; */
+    width: 20%;
+    text-align: center;
+    /* font-family: 'Jokerman', cursive; */
+    border: 2px solid black;
+    /* padding: 7px; */
+    background-color: #ea00ff;
+    /* Bright yellow background */
+    padding: 20px;
+    /* border: 3px solid #FF00FF; Bright pink border */
+    box-shadow: 5px 5px #000;
+    /* Add a shadow for depth */
+    font-family: 'Comic Sans MS', cursive;
+    /* Use a nostalgic font */
+  }
+
+  #fame-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  #fame-display img {
+    max-width: 150px;
+    height: auto;
+    border: 2px solid #ff33cc;
+    /* border-radius: 10px; */
+    transition: transform 0.2s, filter 0.3s;
+  }
+
+  #fame-display img:hover {
+    transform: scale(1.1);
+    filter: pixelate(5px);
+  }
+</style>
 <script>
+  let visitorCount = 456;
+  // let cart = 0;
   document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM fully loaded and parsed');
     const buttons = document.querySelectorAll('.item button');
     console.log('Buttons found:', buttons);
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            console.log('Button clicked');
-            alert('Item added to cart!');
-        });
-    });
-});
+
+    // buttons.forEach(button => {
+    //   button.addEventListener('click', () => {
+    //     cart += 1;
+    //     document.getElementById('cart-title').textContent = `Your Cart (${cart})`;
+    //     // console.log('Button clicked');
+    //     console.log(cart);
+    //     // alert('Item added to cart!');
+    //     if (cart == 5) {
+    //       alert('Congratulations! You have unlocked a free Tamagotchi!');
+    //     }
+    //   });
+    // });
+  });
+
+  let cart = [];
+  function addToCart(item) {
+    cart.push(item);
+    document.getElementById('cart-title').innerText = `Your Cart (${cart.length})`;
+    const cartItems = document.getElementById('cart-items');
+    const listItem = document.createElement('li');
+    listItem.textContent = item;
+    cartItems.appendChild(listItem);
+    if (cart.length == 5) {
+      alert('Congratulations! You have unlocked a free Tamagotchi!');
+      const Tamagotchi = document.createElement('li');
+      Tamagotchi.textContent = 'Free Tamagotchi';
+      cartItems.appendChild(Tamagotchi)
+    }
+  }
+
+  const audio = document.getElementById('background-noise');
+
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  document.querySelector('footer p:first-child').textContent = `You’re visitor #${('000000' + visitorCount).slice(-7)} to this mall!`;
+
+  function loadAnimation() {
+    alert('Loading... Please wait like it’s 1999!');
+  }
+
+  window.onload = loadAnimation;
+
+  document.body.addEventListener('keydown', (e) => {
+    // if (e.key === 'ArrowUp' && e.ctrlKey) {
+    alert('Konami Code activated! Welcome to the secret 90s desktop view.');
+    // }
+  });
+
+  document.getElementById('upload-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const fileInput = document.getElementById('profile-picture');
+    const file = fileInput.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const imageElement = document.createElement('img');
+        imageElement.src = e.target.result;
+        imageElement.style.filter = 'sepia(100%)'; // Apply sepia filter as default
+        document.getElementById('fame-display').appendChild(imageElement);
+      };
+      reader.readAsDataURL(file);
+    }
+  });
 </script>
+
 </html>
