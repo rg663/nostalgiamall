@@ -46,17 +46,17 @@
   <main class="container">
     <div id="retro-modal" hidden>
       <div class="modal-content">
-        <p id="modal-message">This is a modal alert!</p>
+        <p id="modal-message">Loading... Please wait like it’s 1999!</p>
         <button onclick="closeModal()">Close</button>
       </div>
     </div>
 
     <section class="wall-of-fame">
-      <img src="images/camera.png" width=150px height=150px alt="Retro Cart">
+      <img src="images/camera.png" width=100px height=100px alt="Retro Cart">
       <h2>Shopper’s Wall of Fame</h2>
       <hr>
       <form id="upload-form">
-        <label for="profile-picture">Upload Your Retro Profile Picture:</label>
+        <label for="profile-picture">Upload Your Retro Memories or Profile Pictures:</label>
         <input type="file" id="profile-picture" accept="image/*">
         <button type="submit">Upload</button>
       </form>
@@ -192,11 +192,17 @@
           <p></p>
           <button onclick="addToCart('A Trip to a Blockbuster Store')">Add to Cart</button>
         </div>
+        <div class="item">
+          <img src="images/s.webp" alt="Cool S">
+          <h2>Tutorial on How to Draw the Cool S</h2>
+          <p></p>
+          <button onclick="addToCart('A Trip to a Blockbuster Store')">Add to Cart</button>
+        </div>
       </div>
     </section>
 
     <aside class="cart">
-      <img src="images/trolley.png" width=150px height=150px alt="Retro Cart">
+      <img src="images/trolley.png" width=100px height=100px alt="Retro Cart">
       <h2 id="cart-title">Your Cart (0)</h2>
       <hr>
       <ul id="cart-items">
@@ -217,6 +223,29 @@
 
   .hidden {
     display: none;
+  }
+
+  .glitter {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, pink, white);
+    pointer-events: none;
+    /* Prevent interference with clicking */
+    animation: fade-and-move 1s ease-out forwards;
+  }
+
+  @keyframes fade-and-move {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(-10px, -30px) scale(0.5);
+    }
   }
 
   #retro-modal {
@@ -250,11 +279,15 @@
     background-color: #00f;
     color: #fff;
     border: none;
-    cursor: pointer;
+    cursor: url('images/cursorwandhover.cur'), auto;
   }
 
   .modal-content button:hover {
     background-color: #0056b3;
+  }
+
+  * {
+    cursor: url('images/cursorwand.cur'), auto;
   }
 
   body.retro {
@@ -263,7 +296,7 @@
     font-family: 'Comic Sans MS', cursive;
     margin: 0;
     padding: 0;
-    cursor: url('cursor.gif'), auto;
+    cursor: url('images/cursorwand.cur'), auto;
   }
 
   .marquee {
@@ -388,6 +421,7 @@
     font-family: 'Comic Sans MS', cursive;
     /* Use a nostalgic font */
     transition: background-color 0.3s, transform 0.2s;
+    cursor: url('images/cursorwandhover.cur'), auto;
   }
 
   .item button:hover {
@@ -448,7 +482,7 @@
     font-family: 'Impact', cursive;
     font-weight: bold;
     padding: 10px 15px;
-    /* cursor: url('cd.gif'), auto; */
+    cursor: url('images/cursorwandhover.cur'), auto;
     /* border-radius: 5px; */
     /* text-shadow: 1px 1px #000; */
     transition: transform 0.2s, background-color 0.3s;
@@ -519,6 +553,7 @@
     font-family: 'Jokerman', cursive;
     /* border-radius: 5px; */
     transition: background-color 0.3s, transform 0.2s;
+    cursor: url('images/cursorwandhover.cur'), auto;
   }
 
   .item button:hover {
@@ -579,12 +614,13 @@
   }
 </style>
 <script>
+  var sound = new Audio("images/cha-ching-7053.mp3");
   let visitorCount = 456;
   // let cart = 0;
   document.addEventListener('DOMContentLoaded', function () {
-  console.log('DOM fully loaded and parsed');
-  const buttons = document.querySelectorAll('.item button');
-  console.log('Buttons found:', buttons);
+    console.log('DOM fully loaded and parsed');
+    const buttons = document.querySelectorAll('.item button');
+    console.log('Buttons found:', buttons);
     // buttons.forEach(button => {
     //   button.addEventListener('click', () => {
     //     cart += 1;
@@ -621,12 +657,14 @@
     const listItem = document.createElement('li');
     listItem.textContent = item;
     cartItems.appendChild(listItem);
+    sound.play();
     if (cart.length == 5) {
       showModal('Congratulations! You have unlocked a free Tamagotchi!');
       const Tamagotchi = document.createElement('li');
       Tamagotchi.textContent = 'Free Tamagotchi';
       cartItems.appendChild(Tamagotchi)
     }
+    sound.currentTime = 0;
   }
 
   const audio = document.getElementById('background-noise');
@@ -667,6 +705,22 @@
       };
       reader.readAsDataURL(file);
     }
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    // Create a glitter element
+    const glitter = document.createElement("div");
+    glitter.classList.add("glitter");
+
+    // Position the glitter at the cursor
+    glitter.style.left = `${e.pageX}px`;
+    glitter.style.top = `${e.pageY}px`;
+
+    // Append glitter to the body
+    document.body.appendChild(glitter);
+
+    // Remove the glitter after the animation
+    setTimeout(() => glitter.remove(), 1000);
   });
 </script>
 
