@@ -7,10 +7,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="retro">
-  <style>
-    @import url('https://fonts.cdnfonts.com/css/jokerman');
-  </style>
-  <header>
+  <audio id="background-noise" loop>
+    <!-- <source src="sounds/dialup.mp3" type="audio/mpeg"> -->
+    Your browser does not support the audio element.
+  </audio>
+  <button onclick="toggleAudio()">Mute/Unmute Background Sound</button>
+
+  <!-- <header>
     <h1>Welcome to Nostalgia Mall</h1>
     <nav>
       <ul>
@@ -20,127 +23,168 @@
         <li><button>About Us</button></li>
       </ul>
     </nav>
+  </header> -->
+  <header>
+    <h1>Welcome to Nostalgia Mall</h1>
+    <nav>
+      <!-- <frameset>
+        <frame src="menu.html">
+        <frame src="main.html">
+      </frameset> -->
+    </nav>
   </header>
+
+  <marquee class="marquee">Special Offer: Free Tamagotchi with orders over $50!</marquee>
 
   <main>
     <section class="item-listing">
       <div class="main">
         <div class="item">
-          <img src="burntcd.jpg" alt="Burnt CD">
+          <img src="images/burntcd.jpg" alt="Burnt CD">
           <h2>A Burnt CD</h2>
           <p>The Spotify of the 2000s!</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="scholasticbookorder.jpg" alt="Scholastic Book Fair">
+          <img src="images/scholasticbookorder.jpg" alt="Scholastic Book Fair">
           <h2>A Trip to the Scholastic Book Fair</h2>
           <p>Who needs Kindles when you have the book fair?</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="playdoh.jpg" alt="Playdoh!">
+          <img src="images/playdoh.jpg" alt="Playdoh!">
           <h2>Cans of Playdoh</h2>
           <p>Mmm, the smell of this image.</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="cartridgepencil.jpg" alt="Pencil with cartridges">
+          <img src="images/cartridgepencil.jpg" alt="Pencil with cartridges">
           <h2>A Pencil With Cartridges</h2>
           <p>The pain of losing a cartridge.</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="ikeamat.jpg" alt="City Maps Mat">
+          <img src="images/ikeamat.jpg" alt="City Maps Mat">
           <h2>The Mat We All Had</h2>
           <p>The joy of sitting on these is one kids of these days will never know.</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="fortuneteller.jpg" alt="Fortune Teller">
+          <img src="images/fortuneteller.jpg" alt="Fortune Teller">
           <h2>Fortune Teller (or Cootie Catcher)</h2>
           <p>1, 2, 3, 4. Pick one.</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="ipod.jpg" alt="iPod">
+          <img src="images/ipod.jpg" alt="iPod">
           <h2>The iPod Nano</h2>
           <p>Again, who needs Spotify?</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="motorola.jpg" alt="Motorola">
+          <img src="images/motorola.jpg" alt="Motorola">
           <h2>A Motorola Flip Phone</h2>
           <p>Typing speed ... 10 WPM.</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="gimp.jpg" alt="Gimp">
+          <img src="images/gimp.jpg" alt="Gimp">
           <h2>Gimps/Scoobidoos</h2>
           <p>Was it just me, or did everyone have their friends start one of these off?</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="fisherprice.jpg" alt="Fisher Price">
+          <img src="images/fisherprice.jpg" alt="Fisher Price">
           <h2>The Cutest Phones</h2>
           <p>Nothing beated the joy of spinning the dial on these phones.</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="nintendods.webp" alt="DS">
+          <img src="images/nintendods.webp" alt="DS">
           <h2>Nintendo DS</h2>
           <p>What was your first game? Mine was Mario.</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="clubpenguin.webp" alt="Club Penguin Cards">
+          <img src="images/clubpenguin.webp" alt="Club Penguin Cards">
           <h2>Club Penguin Membership!</h2>
           <p>I spent hours on Club Penguin.</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="highlights.jpg" alt="Highlights">
+          <img src="images/highlights.jpg" alt="Highlights">
           <h2>A Copy of the Highlights Magazine</h2>
           <p>My daily puzzles have been replaced by my phone :(</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="spacemaker.jpg" alt="Spacemaker">
+          <img src="images/spacemaker.jpg" alt="Spacemaker">
           <h2>Spacemaker Pencil Box</h2>
           <p></p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="sillybandz.jpg" alt="Silly Bandz">
+          <img src="images/sillybandz.jpg" alt="Silly Bandz">
           <h2>Silly Bandz</h2>
           <p>The fashion icon and status symbol of the 2000s.</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="twinkletoes.jpeg" alt="Twinkle Toes">
+          <img src="images/twinkletoes.jpeg" alt="Twinkle Toes">
           <h2>The OG Twinkle Toes</h2>
           <p>Sooo bling.</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="chucke.jpg" alt="Chuck E Cheese">
+          <img src="images/chucke.jpg" alt="Chuck E Cheese">
           <h2>A Bucket of Coins at Chuck E Cheese</h2>
           <p></p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="razor.jpg" alt="Razor">
+          <img src="images/razor.jpg" alt="Razor">
           <h2>Razor Scooter</h2>
           <p>The original segue.</p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="disco.webp" alt="Disco">
-          <h2>The Cutest Disco Ball/h2>
-          <p>.</p>
+          <img src="images/disco.webp" alt="Disco">
+          <h2>The Cutest Disco Ball</h2>
+          <p></p>
           <button>Add to Cart</button>
         </div>
         <div class="item">
-          <img src="pencilgrip.webp" alt="Pencil Grips">
+          <img src="images/pencilgrip.webp" alt="Pencil Grips">
+          <h2>Some Pencil Grips in Your Pencil Box</h2>
+          <p></p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="item">
+          <img src="images/blockbuster.jpg" alt="Blockbuster">
+          <h2>A Trip to a Blockbuster Store</h2>
+          <p></p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="item">
+          <img src="images/chucke.jpg" alt="Chuck E Cheese">
+          <h2>A Bucket of Coins at Chuck E Cheese</h2>
+          <p></p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="item">
+          <img src="images/razor.jpg" alt="Razor">
+          <h2>Razor Scooter</h2>
+          <p>The original segue.</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="item">
+          <img src="images/disco.webp" alt="Disco">
+          <h2>The Cutest Disco Ball</h2>
+          <p></p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="item">
+          <img src="images/pencilgrip.webp" alt="Pencil Grips">
           <h2>Some Pencil Grips in Your Pencil Box</h2>
           <p></p>
           <button>Add to Cart</button>
@@ -150,8 +194,22 @@
   </main>
 
   <footer>
+    <p>You’re visitor #0000456 to this mall!</p>
     <p>© 2000 Nostalgia Mall. All Rights Reserved.</p>
   </footer>
-  <script src="script.js"></script>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM fully loaded and parsed');
+    const buttons = document.querySelectorAll('.item button');
+    console.log('Buttons found:', buttons);
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            console.log('Button clicked');
+            alert('Item added to cart!');
+        });
+    });
+});
+</script>
 </html>
